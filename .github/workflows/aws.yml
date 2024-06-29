@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1  # set this to your preferred AWS region
-  ECR_REPOSITORY: student-performance-predictor  # set this to your Amazon ECR public repository name
+  ECR_REPOSITORY: student-perfomance-predictor  # set this to your Amazon ECR public repository name
 
 permissions:
   contents: read
