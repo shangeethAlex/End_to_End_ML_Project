@@ -29,7 +29,8 @@ jobs:
 
     - name: Login to Amazon ECR Public
       id: login-ecr-public
-      run: aws ecr-public get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin public.ecr.aws
+      run: |
+        aws ecr-public get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin public.ecr.aws
 
     - name: Build, tag, and push image to Amazon ECR Public
       id: build-image
